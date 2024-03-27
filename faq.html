@@ -1,0 +1,28 @@
+---
+layout: doc
+toc: true
+title: Frequently Asked Questions
+description: Gigalixir Frequently Asked Questions | Version support for Phoenix, Elixir, OTP | Multiple Custom Domains, non-Elixir Apps | Gigalixir Comparo - Heroku & Deis
+order: 230
+permalink: /docs/faq.html
+---
+<div class="faqs_section">
+  {%- include faqs.html -%}
+</div>
+<script>
+  const Faqs = document.querySelectorAll('.faq_item');
+  const Filters = document.querySelectorAll('.category');
+  const hide = (category) => {
+    console.log(category);
+    const FaqF = document.querySelectorAll(category);
+    if (category=='.all'){
+      Faqs.forEach(el => {
+        el.classList.remove('hidden')});
+    } else {
+    Faqs.forEach(el => {
+    el.classList.add('hidden')});
+    FaqF.forEach((el) => {
+      el.classList.remove('hidden');
+    })};
+  };
+</script>
